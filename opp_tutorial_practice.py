@@ -35,3 +35,26 @@ print(Employee.fullname(emp1)) #class.method(instance as argument required)
 print(Employee.fullname(emp2))
 print(emp2.fullname())
 
+# ======================= Lecture 1 Practice =============================================================
+
+# --------------------------------------------------------------------------------------------------------
+
+# Let's make a new class called 'Items' that must have objects representing items of a grocery store.
+# Objects/instances of class Items must have four attributes: item name, available quantity, price, and expiry.
+# Using any instances two attributes (price and quantity), write an in-class method to compute possible revenue.
+
+class Items():
+    def __init__(self, name, quantity, price, expiry):
+        self.name  = name
+        self.quantity  = quantity
+        self.price = price
+        self.expiry = expiry
+
+    def expected_revenue(self):
+        return self.price*self.quantity
+
+item_1 = Items("Nestle Yougurt", 50, 170,"10th June 2022")
+
+print(item_1.price)
+print(Items.expected_revenue(item_1))
+print(item_1.expected_revenue())
